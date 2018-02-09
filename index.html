@@ -1,0 +1,1005 @@
+<html>
+
+<head>
+  <title> ICNYU Form Builder  </title>
+
+
+  <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-dark.min.css">
+  <link rel="stylesheet" href="highlight\styles\monokai-sublime.css">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+
+<div class="container" id="app">
+
+  <div class="row" >
+
+    <div class="col-sm-4">
+        <!-- <h1> Form Details</h1> -->
+
+        <form id="form" action="#">
+          <fieldset>
+            <legend>Form Fields </legend>
+            <div class="input-group vertical">
+              <label for="nmbr">Form ID</label>
+              <input v-model="formID" type="number" id="nmbr" value="">
+            </div>
+            <div class="input-group fluid">
+              <label  for="username">Test Flag (Y for OFF/ N for ON)</label>
+              <input v-model="formFlag" type="text" value="" id="username" placeholder="username">
+            </div>
+            <div class="input-group vertical">
+              <label for="price">Ticket Price</label>
+              <input v-model="formPrice" type="number" id="price" value="">
+            </div>
+          </fieldset>
+        </form>
+
+
+
+    </div>
+
+
+    <div class="col-sm-8" style="max-height:50%;  overflow: scroll;">
+
+      <form cf-form class="form-container"  method="post" id="cb_web_form">
+        <input type="hidden" name="FORM_ID" value="2648" />
+        <input type="hidden" name="TEST_FLAG" id="TEST_FLAG" value="Y" />
+
+        <h2><span class="form-title">Register</span></h2>
+
+        <label class="form-title" for="FIRST_NAME">First Name</label> </br>
+        <input class="form-field" type="text" id="FIRST_NAME" name="FIRST_NAME" value="" /> <br/>
+        <label class="form-title" for="LAST_NAME">Last Name</label> </br>
+        <input class="form-field" type="text" id="LAST_NAME" name="LAST_NAME" value="" /><br/>
+
+        <label class="form-title" for="EMAIL">Email</label> </br>
+        <input class="form-field" type="text" id="EMAIL" name="EMAIL" value="" /><br/>
+
+      <!-- I do not have a list of reserved words but affiliation maybe one. Added another character and field then passed value -->
+        <label class="form-title" for="affiliationx">Affiliation</label> </br>
+        <select class="form-field" id="affiliationx" name="affiliationx">
+        <option value=""></option>
+        <option value="NYU Undergrad"> NYU Undergrad </option>
+        <option value="NYU Grad Student"> NYU Grad Student </option>
+        <option value="NYU Faculty/Staff/Admin"> NYU Faculty/Staff/Admin</option>
+        <option value="NYU Alumni">NYU Alumni</option>
+        <option value="Non-NYU Undergrad">Non-NYU Undergrad</option>
+        <option value="Non-NYU Grad Student">Non-NYU Grad Student</option>
+        <option value="ICNYU Conver(t)sations Member">ICNYU Conver(t)sations Member</option>
+        <option value="ICNYU Professionals Member">ICNYU Professionals Member</option>
+        <option value="ICNYU Womens Initiative Member">ICNYU Womens Initiative Member</option>
+        <option value="ICNYU Family Connect">ICNYU Family Connect</option>
+        <option value="Community Member">Community Member</option>
+      </select> </br>
+      <!-- I added a VALUE; you need to pass something to be collected. Also, move NAME to INPUT tag-->
+        <!-- <input class="form-field" type="checkbox" id="vegetarian" name="vegetarian" value="Y"> -->
+        <!-- <label class="form-title" for="vegetarian"  >Vegeterian Meal Option</label> -->
+        </br>
+        </br>
+
+
+        <label class="form-title" for="ADDRESS_LINE_1">Address</label> </br>
+        <input class="form-field" type="text" id="ADDRESS_LINE_1" name="ADDRESS_LINE_1" value="" /> </br>
+        <label class="form-title" for="CITY">City</label> </br>
+        <input class="form-field" type="text" id="CITY" name="CITY" value="" /> </br>
+        <label class="form-title" for="STATE">State</label> </br>
+        <select class="form-field" id="STATE" name="STATE">
+        <option value=""> </option>
+        <option value="" style="font-weight: bold;">- American States </option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+        <option value=""> </option>
+        <option value="" style="font-weight: bold;">- Armed Forces </option>
+        <option value="AA">Armed Forces Americas</option>
+        <option value="AP">Armed Forces Pacific</option>
+        <option value="AE">Armed Forces Others</option>
+        <option value="" style="font-weight: bold;">- Canadian Provinces </option>
+        <option value="AB">Alberta</option>
+        <option value="BC">British Columbia</option>
+        <option value="MB">Manitoba</option>
+        <option value="NB">New Brunswick</option>
+        <option value="NL">Newfoundland and Labrador</option>
+        <option value="NS">Nova Scotia</option>
+        <option value="ON">Ontario</option>
+        <option value="PE">Prince Edward Island</option>
+        <option value="QC">Quebec</option>
+        <option value="SK">Saskatchewan</option>
+        <option value="NT">Northwest Territories</option>
+        <option value="NU">Nunavut</option>
+        <option value="YT">Yukon</option>
+        <option value="NA"> Non-US</option>
+        <option value="" style="font-weight: bold;"> </option>
+        <option value="" style="font-weight: bold;">- US Territories</option>
+        <option value="AS">American Samoa</option>
+        <option value="GU">Guam</option>
+        <option value="MP">Northern Mariana Islands</option>
+        <option value="PR">Puerto Rico</option>
+        <option value="UM">United States Minor Outlying Islands</option>
+        <option value="VI">Virgin Islands</option>
+
+      </select> </br>
+
+        <label class="form-title" for="POSTAL_CODE">Zip</label> </br>
+        <input class="form-field" type="text" id="POSTAL_CODE" name="POSTAL_CODE" value="" size="5" /> </br>
+
+        <label class="form-title" for="COUNTRY">Country</label> </br>
+        <select class="form-field" id="COUNTRY" name="COUNTRY">
+          <option value="US" selected="selected">United States</option>
+           <option value="AF" >Afghanistan</option>
+           <option value="AL" >Albania</option>
+           <option value="DZ" >Algeria</option>
+           <option value="AS" >American Samoa (US)</option>
+           <option value="AD" >Andorra</option>
+           <option value="AO" >Angola</option>
+           <option value="AI" >Anguilla (UK)</option>
+           <option value="AG" >Antigua and Barbuda</option>
+           <option value="AR" >Argentina</option>
+           <option value="AM" >Armenia</option>
+           <option value="AW" >Aruba</option>
+           <option value="AU" >Australia</option>
+           <option value="AT" >Austria</option>
+           <option value="AZ" >Azerbaijan</option>
+           <option value="BS" >Bahamas</option>
+           <option value="BH" >Bahrain</option>
+           <option value="BD" >Bangladesh</option>
+           <option value="BB" >Barbados</option>
+           <option value="BY" >Belarus</option>
+           <option value="BE" >Belgium</option>
+           <option value="BZ" >Belize</option>
+           <option value="BJ" >Benin</option>
+           <option value="BM" >Bermuda (UK)</option>
+           <option value="BT" >Bhutan</option>
+           <option value="BO" >Bolivia</option>
+           <option value="BA" >Bosnia and Herzegovina</option>
+           <option value="BW" >Botswana</option>
+           <option value="BR" >Brazil</option>
+           <option value="VG" >British Virgin Islands (UK)</option>
+           <option value="BN" >Brunei Darussalam</option>
+           <option value="BG" >Bulgaria</option>
+           <option value="BF" >Burkina Faso</option>
+           <option value="BI" >Burundi</option>
+           <option value="KH" >Cambodia</option>
+           <option value="CM" >Cameroon</option>
+           <option value="CA" >Canada</option>
+           <option value="CV" >Cape Verde</option>
+           <option value="KY" >Cayman Islands (UK)</option>
+           <option value="CF" >Central African Republic</option>
+           <option value="TD" >Chad</option>
+           <option value="CL" >Chile</option>
+           <option value="CN" >China</option>
+           <option value="CX" >Christmas Island (AU)</option>
+           <option value="CC" >Cocos (Keeling) Islands (AU)</option>
+           <option value="CO" >Colombia</option>
+           <option value="KM" >Comoros</option>
+           <option value="CD" >Congo, Democratic Republic of the (Zaire)</option>
+           <option value="CG" >Congo, Republic of the</option>
+           <option value="CK" >Cook Islands (NZ)</option>
+           <option value="CR" >Costa Rica</option>
+           <option value="CI" >Cote d'Ivoire (Ivory Coast)</option>
+           <option value="HR" >Croatia</option>
+           <option value="CU" >Cuba</option>
+           <option value="CY" >Cyprus</option>
+           <option value="CZ" >Czech Republic</option>
+           <option value="DK" >Denmark</option>
+           <option value="DJ" >Djibouti</option>
+           <option value="DM" >Dominica</option>
+           <option value="DO" >Dominican Republic</option>
+           <option value="EC" >Ecuador</option>
+           <option value="EG" >Egypt</option>
+           <option value="SV" >El Salvador</option>
+           <option value="GQ" >Equatorial Guinea</option>
+           <option value="ER" >Eritrea</option>
+           <option value="EE" >Estonia</option>
+           <option value="ET" >Ethiopia</option>
+           <option value="FK" >Falkland Islands (UK)</option>
+           <option value="FO" >Faroe Islands (DK)</option>
+           <option value="FJ" >Fiji</option>
+           <option value="FI" >Finland</option>
+           <option value="FR" >France</option>
+           <option value="GF" >French Guiana (FR)</option>
+           <option value="PF" >French Polynesia (FR)</option>
+           <option value="GA" >Gabon</option>
+           <option value="GM" >Gambia</option>
+           <option value="GE" >Georgia</option>
+           <option value="DE" >Germany</option>
+           <option value="GH" >Ghana</option>
+           <option value="GI" >Gibraltar (UK)</option>
+           <option value="GR" >Greece</option>
+           <option value="GL" >Greenland (DK)</option>
+           <option value="GD" >Grenada</option>
+           <option value="GP" >Guadeloupe (FR)</option>
+           <option value="GU" >Guam (US)</option>
+           <option value="GT" >Guatemala</option>
+           <option value="GN" >Guinea</option>
+           <option value="GW" >Guinea-Bissau</option>
+           <option value="GY" >Guyana</option>
+           <option value="HT" >Haiti</option>
+           <option value="VA" >Holy See (Vatican City)</option>
+           <option value="HN" >Honduras</option>
+           <option value="HK" >Hong Kong (CN)</option>
+           <option value="HU" >Hungary</option>
+           <option value="IS" >Iceland</option>
+           <option value="IN" >India</option>
+           <option value="ID" >Indonesia</option>
+           <option value="IR" >Iran</option>
+           <option value="IQ" >Iraq</option>
+           <option value="IE" >Ireland</option>
+           <option value="IL" >Israel</option>
+           <option value="IT" >Italy</option>
+           <option value="JM" >Jamaica</option>
+           <option value="JP" >Japan</option>
+           <option value="JO" >Jordan</option>
+           <option value="KZ" >Kazakstan</option>
+           <option value="KE" >Kenya</option>
+           <option value="KI" >Kiribati</option>
+           <option value="KP" >Korea, Democratic People's Republic (North)</option>
+           <option value="KR" >Korea, Republic of (South)</option>
+           <option value="KW" >Kuwait</option>
+           <option value="KG" >Kyrgyzstan</option>
+           <option value="LA" >Laos</option>
+           <option value="LV" >Latvia</option>
+           <option value="LB" >Lebanon</option>
+           <option value="LS" >Lesotho</option>
+           <option value="LR" >Liberia</option>
+           <option value="LY" >Libya</option>
+           <option value="LI" >Liechtenstein</option>
+           <option value="LT" >Lithuania</option>
+           <option value="LU" >Luxembourg</option>
+           <option value="MO" >Macau (CN)</option>
+           <option value="MK" >Macedonia</option>
+           <option value="MG" >Madagascar</option>
+           <option value="MW" >Malawi</option>
+           <option value="MY" >Malaysia</option>
+           <option value="MV" >Maldives</option>
+           <option value="ML" >Mali</option>
+           <option value="MT" >Malta</option>
+           <option value="MH" >Marshall islands</option>
+           <option value="MQ" >Martinique (FR)</option>
+           <option value="MR" >Mauritania</option>
+           <option value="MU" >Mauritius</option>
+           <option value="YT" >Mayotte (FR)</option>
+           <option value="MX" >Mexico</option>
+           <option value="FM" >Micronesia, Federated States of</option>
+           <option value="MD" >Moldova</option>
+           <option value="MC" >Monaco</option>
+           <option value="MN" >Mongolia</option>
+           <option value="ME" >Montenegro</option>
+           <option value="MS" >Montserrat (UK)</option>
+           <option value="MA" >Morocco</option>
+           <option value="MZ" >Mozambique</option>
+           <option value="MM" >Myanmar</option>
+           <option value="NA" >Namibia</option>
+           <option value="NR" >Nauru</option>
+           <option value="NP" >Nepal</option>
+           <option value="NL" >Netherlands</option>
+           <option value="AN" >Netherlands Antilles (NL)</option>
+           <option value="NC" >New Caledonia (FR)</option>
+           <option value="NZ" >New Zealand</option>
+           <option value="NI" >Nicaragua</option>
+           <option value="NE" >Niger</option>
+           <option value="NG" >Nigeria</option>
+           <option value="NU" >Niue</option>
+           <option value="NF" >Norfolk Island (AU)</option>
+           <option value="MP" >Northern Mariana Islands (US)</option>
+           <option value="NO" >Norway</option>
+           <option value="OM" >Oman</option>
+           <option value="PK" >Pakistan</option>
+           <option value="PW" >Palau</option>
+           <option value="PA" >Panama</option>
+           <option value="PG" >Papua New Guinea</option>
+           <option value="PY" >Paraguay</option>
+           <option value="PE" >Peru</option>
+           <option value="PH" >Philippines</option>
+           <option value="PN" >Pitcairn Islands (UK)</option>
+           <option value="PL" >Poland</option>
+           <option value="PT" >Portugal</option>
+           <option value="PR" >Puerto Rico (US)</option>
+           <option value="QA" >Qatar</option>
+           <option value="RE" >Reunion (FR)</option>
+           <option value="RO" >Romania</option>
+           <option value="RU" >Russia</option>
+           <option value="RW" >Rwanda</option>
+           <option value="SH" >Saint Helena (UK)</option>
+           <option value="KN" >Saint Kitts and Nevis</option>
+           <option value="LC" >Saint Lucia</option>
+           <option value="PM" >Saint Pierre and Miquelon (FR)</option>
+           <option value="VC" >Saint Vincent and the Grenadines</option>
+           <option value="WS" >Samoa</option>
+           <option value="SM" >San Marino</option>
+           <option value="ST" >Sao Tome and Principe</option>
+           <option value="SA" >Saudi Arabia</option>
+           <option value="SN" >Senegal</option>
+           <option value="RS" >Serbia</option>
+           <option value="CS" >Serbia and Montenegro</option>
+           <option value="SC" >Seychelles</option>
+           <option value="SL" >Sierra Leone</option>
+           <option value="SG" >Singapore</option>
+           <option value="SK" >Slovakia</option>
+           <option value="SI" >Slovenia</option>
+           <option value="SB" >Solomon Islands</option>
+           <option value="SO" >Somalia</option>
+           <option value="ZA" >South Africa</option>
+           <option value="GS" >South Georgia & South Sandwich Islands (UK)</option>
+           <option value="ES" >Spain</option>
+           <option value="LK" >Sri Lanka</option>
+           <option value="SD" >Sudan</option>
+           <option value="SR" >Suriname</option>
+           <option value="SZ" >Swaziland</option>
+           <option value="SE" >Sweden</option>
+           <option value="CH" >Switzerland</option>
+           <option value="SY" >Syria</option>
+           <option value="TW" >Taiwan</option>
+           <option value="TJ" >Tajikistan</option>
+           <option value="TZ" >Tanzania</option>
+           <option value="TH" >Thailand</option>
+           <option value="TL" >Timor-Leste</option>
+           <option value="TG" >Togo</option>
+           <option value="TK" >Tokelau</option>
+           <option value="TO" >Tonga</option>
+           <option value="TT" >Trinidad and Tobago</option>
+           <option value="TN" >Tunisia</option>
+           <option value="TR" >Turkey</option>
+           <option value="TM" >Turkmenistan</option>
+           <option value="TC" >Turks and Caicos Islands (UK)</option>
+           <option value="TV" >Tuvalu</option>
+           <option value="UG" >Uganda</option>
+           <option value="UA" >Ukraine</option>
+           <option value="AE" >United Arab Emirates</option>
+           <option value="GB" >United Kingdom</option>
+           <option value="UY" >Uruguay</option>
+           <option value="UZ" >Uzbekistan</option>
+           <option value="VU" >Vanuatu</option>
+           <option value="VE" >Venezuela</option>
+           <option value="VN" >Vietnam</option>
+           <option value="VI" >Virgin Islands (US)</option>
+           <option value="WF" >Wallis and Futuna (FR)</option>
+           <option value="EH" >Western Sahara</option>
+           <option value="YE" >Yemen</option>
+           <option value="ZM" >Zambia</option>
+           <option value="ZW" >Zimbabwe</option>
+           <option value="GB" >United Kingdom</option>
+           <option value="GB" >United Kingdom</option>
+           <option value="BH" >Bahrain</option>
+           <option value="BZ" >Belize(British Honduras)</option>
+           <option value="ZW" >Zimbabwe(Rhodesia)</option>
+           <option value="TG" >Togo(Togoland)</option>
+           <option value="BJ" >Benin(Dahomey)</option>
+           <option value="GB" >United Kingdom(Northern Ireland)</option>
+           <option value="RU" >Russia(USSR)</option>
+           <option value="CG" >Congo, Republic of the</option>
+           <option value="GB" >United Kingdom(Great Britain)</option>
+           <option value="GB" >United Kingdom(Scotland)</option>
+           <option value="TT" >Trinidad and Tobago</option>
+           <option value="GB" >United Kingdom(Wales)</option>
+        </select> </br>
+
+
+
+        <label class="form-title" for="ticketQuantity">Number of Tickets</label> </br>
+        <input class="form-field" type="text" id="ticketQuantity" name="ticketQuantity" value="0" size="5" /> </br>
+
+
+        <h2 class="form-title">${{formPrice}}/ticket</h2> </br>
+        <label class="form-title" for="AMOUNT_EVT">Total Amount Paid</label> </br>
+
+        <input class="form-field" type="text" id="AMOUNT_PAID" name="AMOUNT_PAID" value="0" readonly size="5" /> </br>
+        <input type="hidden" id="AMOUNT_EVT" name="AMOUNT_EVT" value="0" /> </br>
+
+
+        <!-- <div class="submit-container"> -->
+        </br>
+        <input class="submit-button" type="submit" value="Submit" />
+        <!-- </div> -->
+
+        <p class="privacy_policy form-title"> <strong>Notice:</strong> New York University is committed to respecting your privacy. You can be assured that personal information will only be used by New York University to conduct official University business and personal information will never be
+          disseminated to any unaffiliated third party.<br/> <a href="http://www.nyu.edu/about/notice.html">New York University&rsquo;s privacy policy &raquo;</a> </p>
+
+
+        <script type="text/javascript">
+          var form = document.getElementById("cb_web_form");
+          var ticketQuantity = document.getElementById("ticketQuantity");
+          var amount = document.getElementById("AMOUNT_EVT");
+          var total = document.getElementById("AMOUNT_PAID");
+
+          function getIntValue(field) {
+            if (field == null) return 0;
+            var value = parseFloat(field.value);
+            if (isNaN(value)) return 0;
+            return value;
+          }
+
+          function calculatePaymentTotal() {
+            total.value = getIntValue(ticketQuantity);
+            total.value = total.value * {{formPrice}};
+            amount.value = total.value;
+            return true;
+          }
+          form.onsubmit = ticketQuantity.onchange = calculatePaymentTotal;
+        </script>
+
+      </form>
+
+
+
+    </div>
+
+
+  </div>
+
+
+  <div class="row">
+
+    <div class="col-sm-12" style="max-height:50%;  overflow: scroll;">
+
+      <pre>
+      <p>
+
+
+        &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic"&gt;
+
+        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css"&gt;
+
+        &lt;form cf-form class="form-container" action="https://epaygate.nyu.edu/paygateapp/controller?PG_MODE=PG_WEB" method="post" id="cb_web_form"&gt;
+          &lt;input type="hidden" name="FORM_ID" value="{{formID}}" /&gt;
+          &lt;input type="hidden" name="TEST_FLAG" id="TEST_FLAG" value="{{formFlag}}" /&gt;
+
+          &lt;h2&gt;&lt;span class="form-title"&gt;Register&lt;/span&gt;&lt;/h2&gt;
+
+          &lt;label class="form-title" for="FIRST_NAME"&gt;First Name&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="FIRST_NAME" name="FIRST_NAME" value="" /&gt; &lt;br/&gt;
+          &lt;label class="form-title" for="LAST_NAME"&gt;Last Name&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="LAST_NAME" name="LAST_NAME" value="" /&gt;&lt;br/&gt;
+
+          &lt;label class="form-title" for="EMAIL"&gt;Email&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="EMAIL" name="EMAIL" value="" /&gt;&lt;br/&gt;
+
+        &lt;!-- I do not have a list of reserved words but affiliation maybe one. Added another character and field then passed value --&gt;
+          &lt;label class="form-title" for="affiliationx"&gt;Affiliation&lt;/label&gt; &lt;/br&gt;
+          &lt;select class="form-field" id="affiliationx" name="affiliationx"&gt;
+          &lt;option value=""&gt;&lt;/option&gt;
+          &lt;option value="NYU Undergrad"&gt; NYU Undergrad &lt;/option&gt;
+          &lt;option value="NYU Grad Student"&gt; NYU Grad Student &lt;/option&gt;
+          &lt;option value="NYU Faculty/Staff/Admin"&gt; NYU Faculty/Staff/Admin&lt;/option&gt;
+          &lt;option value="NYU Alumni"&gt;NYU Alumni&lt;/option&gt;
+          &lt;option value="Non-NYU Undergrad"&gt;Non-NYU Undergrad&lt;/option&gt;
+          &lt;option value="Non-NYU Grad Student"&gt;Non-NYU Grad Student&lt;/option&gt;
+          &lt;option value="ICNYU Conver(t)sations Member"&gt;ICNYU Conver(t)sations Member&lt;/option&gt;
+          &lt;option value="ICNYU Professionals Member"&gt;ICNYU Professionals Member&lt;/option&gt;
+          &lt;option value="ICNYU Womens Initiative Member"&gt;ICNYU Womens Initiative Member&lt;/option&gt;
+          &lt;option value="ICNYU Family Connect"&gt;ICNYU Family Connect&lt;/option&gt;
+          &lt;option value="Community Member"&gt;Community Member&lt;/option&gt;
+        &lt;/select&gt; &lt;/br&gt;
+        &lt;!-- I added a VALUE; you need to pass something to be collected. Also, move NAME to INPUT tag--&gt;
+          &lt;!-- &lt;input class="form-field" type="checkbox" id="vegetarian" name="vegetarian" value="Y"&gt; --&gt;
+          &lt;!-- &lt;label class="form-title" for="vegetarian"  &gt;Vegeterian Meal Option&lt;/label&gt; --&gt;
+          &lt;/br&gt;
+          &lt;/br&gt;
+
+
+          &lt;label class="form-title" for="ADDRESS_LINE_1"&gt;Address&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="ADDRESS_LINE_1" name="ADDRESS_LINE_1" value="" /&gt; &lt;/br&gt;
+          &lt;label class="form-title" for="CITY"&gt;City&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="CITY" name="CITY" value="" /&gt; &lt;/br&gt;
+          &lt;label class="form-title" for="STATE"&gt;State&lt;/label&gt; &lt;/br&gt;
+          &lt;select class="form-field" id="STATE" name="STATE"&gt;
+          &lt;option value=""&gt; &lt;/option&gt;
+          &lt;option value="" style="font-weight: bold;"&gt;- American States &lt;/option&gt;
+          &lt;option value="AL"&gt;Alabama&lt;/option&gt;
+          &lt;option value="AK"&gt;Alaska&lt;/option&gt;
+          &lt;option value="AZ"&gt;Arizona&lt;/option&gt;
+          &lt;option value="AR"&gt;Arkansas&lt;/option&gt;
+          &lt;option value="CA"&gt;California&lt;/option&gt;
+          &lt;option value="CO"&gt;Colorado&lt;/option&gt;
+          &lt;option value="CT"&gt;Connecticut&lt;/option&gt;
+          &lt;option value="DE"&gt;Delaware&lt;/option&gt;
+          &lt;option value="DC"&gt;District of Columbia&lt;/option&gt;
+          &lt;option value="FL"&gt;Florida&lt;/option&gt;
+          &lt;option value="GA"&gt;Georgia&lt;/option&gt;
+          &lt;option value="HI"&gt;Hawaii&lt;/option&gt;
+          &lt;option value="ID"&gt;Idaho&lt;/option&gt;
+          &lt;option value="IL"&gt;Illinois&lt;/option&gt;
+          &lt;option value="IN"&gt;Indiana&lt;/option&gt;
+          &lt;option value="IA"&gt;Iowa&lt;/option&gt;
+          &lt;option value="KS"&gt;Kansas&lt;/option&gt;
+          &lt;option value="KY"&gt;Kentucky&lt;/option&gt;
+          &lt;option value="LA"&gt;Louisiana&lt;/option&gt;
+          &lt;option value="ME"&gt;Maine&lt;/option&gt;
+          &lt;option value="MD"&gt;Maryland&lt;/option&gt;
+          &lt;option value="MA"&gt;Massachusetts&lt;/option&gt;
+          &lt;option value="MI"&gt;Michigan&lt;/option&gt;
+          &lt;option value="MN"&gt;Minnesota&lt;/option&gt;
+          &lt;option value="MS"&gt;Mississippi&lt;/option&gt;
+          &lt;option value="MO"&gt;Missouri&lt;/option&gt;
+          &lt;option value="MT"&gt;Montana&lt;/option&gt;
+          &lt;option value="NE"&gt;Nebraska&lt;/option&gt;
+          &lt;option value="NV"&gt;Nevada&lt;/option&gt;
+          &lt;option value="NH"&gt;New Hampshire&lt;/option&gt;
+          &lt;option value="NJ"&gt;New Jersey&lt;/option&gt;
+          &lt;option value="NM"&gt;New Mexico&lt;/option&gt;
+          &lt;option value="NY"&gt;New York&lt;/option&gt;
+          &lt;option value="NC"&gt;North Carolina&lt;/option&gt;
+          &lt;option value="ND"&gt;North Dakota&lt;/option&gt;
+          &lt;option value="OH"&gt;Ohio&lt;/option&gt;
+          &lt;option value="OK"&gt;Oklahoma&lt;/option&gt;
+          &lt;option value="OR"&gt;Oregon&lt;/option&gt;
+          &lt;option value="PA"&gt;Pennsylvania&lt;/option&gt;
+          &lt;option value="RI"&gt;Rhode Island&lt;/option&gt;
+          &lt;option value="SC"&gt;South Carolina&lt;/option&gt;
+          &lt;option value="SD"&gt;South Dakota&lt;/option&gt;
+          &lt;option value="TN"&gt;Tennessee&lt;/option&gt;
+          &lt;option value="TX"&gt;Texas&lt;/option&gt;
+          &lt;option value="UT"&gt;Utah&lt;/option&gt;
+          &lt;option value="VT"&gt;Vermont&lt;/option&gt;
+          &lt;option value="VA"&gt;Virginia&lt;/option&gt;
+          &lt;option value="WA"&gt;Washington&lt;/option&gt;
+          &lt;option value="WV"&gt;West Virginia&lt;/option&gt;
+          &lt;option value="WI"&gt;Wisconsin&lt;/option&gt;
+          &lt;option value="WY"&gt;Wyoming&lt;/option&gt;
+          &lt;option value=""&gt; &lt;/option&gt;
+          &lt;option value="" style="font-weight: bold;"&gt;- Armed Forces &lt;/option&gt;
+          &lt;option value="AA"&gt;Armed Forces Americas&lt;/option&gt;
+          &lt;option value="AP"&gt;Armed Forces Pacific&lt;/option&gt;
+          &lt;option value="AE"&gt;Armed Forces Others&lt;/option&gt;
+          &lt;option value="" style="font-weight: bold;"&gt;- Canadian Provinces &lt;/option&gt;
+          &lt;option value="AB"&gt;Alberta&lt;/option&gt;
+          &lt;option value="BC"&gt;British Columbia&lt;/option&gt;
+          &lt;option value="MB"&gt;Manitoba&lt;/option&gt;
+          &lt;option value="NB"&gt;New Brunswick&lt;/option&gt;
+          &lt;option value="NL"&gt;Newfoundland and Labrador&lt;/option&gt;
+          &lt;option value="NS"&gt;Nova Scotia&lt;/option&gt;
+          &lt;option value="ON"&gt;Ontario&lt;/option&gt;
+          &lt;option value="PE"&gt;Prince Edward Island&lt;/option&gt;
+          &lt;option value="QC"&gt;Quebec&lt;/option&gt;
+          &lt;option value="SK"&gt;Saskatchewan&lt;/option&gt;
+          &lt;option value="NT"&gt;Northwest Territories&lt;/option&gt;
+          &lt;option value="NU"&gt;Nunavut&lt;/option&gt;
+          &lt;option value="YT"&gt;Yukon&lt;/option&gt;
+          &lt;option value="NA"&gt; Non-US&lt;/option&gt;
+          &lt;option value="" style="font-weight: bold;"&gt; &lt;/option&gt;
+          &lt;option value="" style="font-weight: bold;"&gt;- US Territories&lt;/option&gt;
+          &lt;option value="AS"&gt;American Samoa&lt;/option&gt;
+          &lt;option value="GU"&gt;Guam&lt;/option&gt;
+          &lt;option value="MP"&gt;Northern Mariana Islands&lt;/option&gt;
+          &lt;option value="PR"&gt;Puerto Rico&lt;/option&gt;
+          &lt;option value="UM"&gt;United States Minor Outlying Islands&lt;/option&gt;
+          &lt;option value="VI"&gt;Virgin Islands&lt;/option&gt;
+
+        &lt;/select&gt; &lt;/br&gt;
+
+          &lt;label class="form-title" for="POSTAL_CODE"&gt;Zip&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="POSTAL_CODE" name="POSTAL_CODE" value="" size="5" /&gt; &lt;/br&gt;
+
+          &lt;label class="form-title" for="COUNTRY"&gt;Country&lt;/label&gt; &lt;/br&gt;
+          &lt;select class="form-field" id="COUNTRY" name="COUNTRY"&gt;
+            &lt;option value="US" selected="selected"&gt;United States&lt;/option&gt;
+             &lt;option value="AF" &gt;Afghanistan&lt;/option&gt;
+             &lt;option value="AL" &gt;Albania&lt;/option&gt;
+             &lt;option value="DZ" &gt;Algeria&lt;/option&gt;
+             &lt;option value="AS" &gt;American Samoa (US)&lt;/option&gt;
+             &lt;option value="AD" &gt;Andorra&lt;/option&gt;
+             &lt;option value="AO" &gt;Angola&lt;/option&gt;
+             &lt;option value="AI" &gt;Anguilla (UK)&lt;/option&gt;
+             &lt;option value="AG" &gt;Antigua and Barbuda&lt;/option&gt;
+             &lt;option value="AR" &gt;Argentina&lt;/option&gt;
+             &lt;option value="AM" &gt;Armenia&lt;/option&gt;
+             &lt;option value="AW" &gt;Aruba&lt;/option&gt;
+             &lt;option value="AU" &gt;Australia&lt;/option&gt;
+             &lt;option value="AT" &gt;Austria&lt;/option&gt;
+             &lt;option value="AZ" &gt;Azerbaijan&lt;/option&gt;
+             &lt;option value="BS" &gt;Bahamas&lt;/option&gt;
+             &lt;option value="BH" &gt;Bahrain&lt;/option&gt;
+             &lt;option value="BD" &gt;Bangladesh&lt;/option&gt;
+             &lt;option value="BB" &gt;Barbados&lt;/option&gt;
+             &lt;option value="BY" &gt;Belarus&lt;/option&gt;
+             &lt;option value="BE" &gt;Belgium&lt;/option&gt;
+             &lt;option value="BZ" &gt;Belize&lt;/option&gt;
+             &lt;option value="BJ" &gt;Benin&lt;/option&gt;
+             &lt;option value="BM" &gt;Bermuda (UK)&lt;/option&gt;
+             &lt;option value="BT" &gt;Bhutan&lt;/option&gt;
+             &lt;option value="BO" &gt;Bolivia&lt;/option&gt;
+             &lt;option value="BA" &gt;Bosnia and Herzegovina&lt;/option&gt;
+             &lt;option value="BW" &gt;Botswana&lt;/option&gt;
+             &lt;option value="BR" &gt;Brazil&lt;/option&gt;
+             &lt;option value="VG" &gt;British Virgin Islands (UK)&lt;/option&gt;
+             &lt;option value="BN" &gt;Brunei Darussalam&lt;/option&gt;
+             &lt;option value="BG" &gt;Bulgaria&lt;/option&gt;
+             &lt;option value="BF" &gt;Burkina Faso&lt;/option&gt;
+             &lt;option value="BI" &gt;Burundi&lt;/option&gt;
+             &lt;option value="KH" &gt;Cambodia&lt;/option&gt;
+             &lt;option value="CM" &gt;Cameroon&lt;/option&gt;
+             &lt;option value="CA" &gt;Canada&lt;/option&gt;
+             &lt;option value="CV" &gt;Cape Verde&lt;/option&gt;
+             &lt;option value="KY" &gt;Cayman Islands (UK)&lt;/option&gt;
+             &lt;option value="CF" &gt;Central African Republic&lt;/option&gt;
+             &lt;option value="TD" &gt;Chad&lt;/option&gt;
+             &lt;option value="CL" &gt;Chile&lt;/option&gt;
+             &lt;option value="CN" &gt;China&lt;/option&gt;
+             &lt;option value="CX" &gt;Christmas Island (AU)&lt;/option&gt;
+             &lt;option value="CC" &gt;Cocos (Keeling) Islands (AU)&lt;/option&gt;
+             &lt;option value="CO" &gt;Colombia&lt;/option&gt;
+             &lt;option value="KM" &gt;Comoros&lt;/option&gt;
+             &lt;option value="CD" &gt;Congo, Democratic Republic of the (Zaire)&lt;/option&gt;
+             &lt;option value="CG" &gt;Congo, Republic of the&lt;/option&gt;
+             &lt;option value="CK" &gt;Cook Islands (NZ)&lt;/option&gt;
+             &lt;option value="CR" &gt;Costa Rica&lt;/option&gt;
+             &lt;option value="CI" &gt;Cote d'Ivoire (Ivory Coast)&lt;/option&gt;
+             &lt;option value="HR" &gt;Croatia&lt;/option&gt;
+             &lt;option value="CU" &gt;Cuba&lt;/option&gt;
+             &lt;option value="CY" &gt;Cyprus&lt;/option&gt;
+             &lt;option value="CZ" &gt;Czech Republic&lt;/option&gt;
+             &lt;option value="DK" &gt;Denmark&lt;/option&gt;
+             &lt;option value="DJ" &gt;Djibouti&lt;/option&gt;
+             &lt;option value="DM" &gt;Dominica&lt;/option&gt;
+             &lt;option value="DO" &gt;Dominican Republic&lt;/option&gt;
+             &lt;option value="EC" &gt;Ecuador&lt;/option&gt;
+             &lt;option value="EG" &gt;Egypt&lt;/option&gt;
+             &lt;option value="SV" &gt;El Salvador&lt;/option&gt;
+             &lt;option value="GQ" &gt;Equatorial Guinea&lt;/option&gt;
+             &lt;option value="ER" &gt;Eritrea&lt;/option&gt;
+             &lt;option value="EE" &gt;Estonia&lt;/option&gt;
+             &lt;option value="ET" &gt;Ethiopia&lt;/option&gt;
+             &lt;option value="FK" &gt;Falkland Islands (UK)&lt;/option&gt;
+             &lt;option value="FO" &gt;Faroe Islands (DK)&lt;/option&gt;
+             &lt;option value="FJ" &gt;Fiji&lt;/option&gt;
+             &lt;option value="FI" &gt;Finland&lt;/option&gt;
+             &lt;option value="FR" &gt;France&lt;/option&gt;
+             &lt;option value="GF" &gt;French Guiana (FR)&lt;/option&gt;
+             &lt;option value="PF" &gt;French Polynesia (FR)&lt;/option&gt;
+             &lt;option value="GA" &gt;Gabon&lt;/option&gt;
+             &lt;option value="GM" &gt;Gambia&lt;/option&gt;
+             &lt;option value="GE" &gt;Georgia&lt;/option&gt;
+             &lt;option value="DE" &gt;Germany&lt;/option&gt;
+             &lt;option value="GH" &gt;Ghana&lt;/option&gt;
+             &lt;option value="GI" &gt;Gibraltar (UK)&lt;/option&gt;
+             &lt;option value="GR" &gt;Greece&lt;/option&gt;
+             &lt;option value="GL" &gt;Greenland (DK)&lt;/option&gt;
+             &lt;option value="GD" &gt;Grenada&lt;/option&gt;
+             &lt;option value="GP" &gt;Guadeloupe (FR)&lt;/option&gt;
+             &lt;option value="GU" &gt;Guam (US)&lt;/option&gt;
+             &lt;option value="GT" &gt;Guatemala&lt;/option&gt;
+             &lt;option value="GN" &gt;Guinea&lt;/option&gt;
+             &lt;option value="GW" &gt;Guinea-Bissau&lt;/option&gt;
+             &lt;option value="GY" &gt;Guyana&lt;/option&gt;
+             &lt;option value="HT" &gt;Haiti&lt;/option&gt;
+             &lt;option value="VA" &gt;Holy See (Vatican City)&lt;/option&gt;
+             &lt;option value="HN" &gt;Honduras&lt;/option&gt;
+             &lt;option value="HK" &gt;Hong Kong (CN)&lt;/option&gt;
+             &lt;option value="HU" &gt;Hungary&lt;/option&gt;
+             &lt;option value="IS" &gt;Iceland&lt;/option&gt;
+             &lt;option value="IN" &gt;India&lt;/option&gt;
+             &lt;option value="ID" &gt;Indonesia&lt;/option&gt;
+             &lt;option value="IR" &gt;Iran&lt;/option&gt;
+             &lt;option value="IQ" &gt;Iraq&lt;/option&gt;
+             &lt;option value="IE" &gt;Ireland&lt;/option&gt;
+             &lt;option value="IL" &gt;Israel&lt;/option&gt;
+             &lt;option value="IT" &gt;Italy&lt;/option&gt;
+             &lt;option value="JM" &gt;Jamaica&lt;/option&gt;
+             &lt;option value="JP" &gt;Japan&lt;/option&gt;
+             &lt;option value="JO" &gt;Jordan&lt;/option&gt;
+             &lt;option value="KZ" &gt;Kazakstan&lt;/option&gt;
+             &lt;option value="KE" &gt;Kenya&lt;/option&gt;
+             &lt;option value="KI" &gt;Kiribati&lt;/option&gt;
+             &lt;option value="KP" &gt;Korea, Democratic People's Republic (North)&lt;/option&gt;
+             &lt;option value="KR" &gt;Korea, Republic of (South)&lt;/option&gt;
+             &lt;option value="KW" &gt;Kuwait&lt;/option&gt;
+             &lt;option value="KG" &gt;Kyrgyzstan&lt;/option&gt;
+             &lt;option value="LA" &gt;Laos&lt;/option&gt;
+             &lt;option value="LV" &gt;Latvia&lt;/option&gt;
+             &lt;option value="LB" &gt;Lebanon&lt;/option&gt;
+             &lt;option value="LS" &gt;Lesotho&lt;/option&gt;
+             &lt;option value="LR" &gt;Liberia&lt;/option&gt;
+             &lt;option value="LY" &gt;Libya&lt;/option&gt;
+             &lt;option value="LI" &gt;Liechtenstein&lt;/option&gt;
+             &lt;option value="LT" &gt;Lithuania&lt;/option&gt;
+             &lt;option value="LU" &gt;Luxembourg&lt;/option&gt;
+             &lt;option value="MO" &gt;Macau (CN)&lt;/option&gt;
+             &lt;option value="MK" &gt;Macedonia&lt;/option&gt;
+             &lt;option value="MG" &gt;Madagascar&lt;/option&gt;
+             &lt;option value="MW" &gt;Malawi&lt;/option&gt;
+             &lt;option value="MY" &gt;Malaysia&lt;/option&gt;
+             &lt;option value="MV" &gt;Maldives&lt;/option&gt;
+             &lt;option value="ML" &gt;Mali&lt;/option&gt;
+             &lt;option value="MT" &gt;Malta&lt;/option&gt;
+             &lt;option value="MH" &gt;Marshall islands&lt;/option&gt;
+             &lt;option value="MQ" &gt;Martinique (FR)&lt;/option&gt;
+             &lt;option value="MR" &gt;Mauritania&lt;/option&gt;
+             &lt;option value="MU" &gt;Mauritius&lt;/option&gt;
+             &lt;option value="YT" &gt;Mayotte (FR)&lt;/option&gt;
+             &lt;option value="MX" &gt;Mexico&lt;/option&gt;
+             &lt;option value="FM" &gt;Micronesia, Federated States of&lt;/option&gt;
+             &lt;option value="MD" &gt;Moldova&lt;/option&gt;
+             &lt;option value="MC" &gt;Monaco&lt;/option&gt;
+             &lt;option value="MN" &gt;Mongolia&lt;/option&gt;
+             &lt;option value="ME" &gt;Montenegro&lt;/option&gt;
+             &lt;option value="MS" &gt;Montserrat (UK)&lt;/option&gt;
+             &lt;option value="MA" &gt;Morocco&lt;/option&gt;
+             &lt;option value="MZ" &gt;Mozambique&lt;/option&gt;
+             &lt;option value="MM" &gt;Myanmar&lt;/option&gt;
+             &lt;option value="NA" &gt;Namibia&lt;/option&gt;
+             &lt;option value="NR" &gt;Nauru&lt;/option&gt;
+             &lt;option value="NP" &gt;Nepal&lt;/option&gt;
+             &lt;option value="NL" &gt;Netherlands&lt;/option&gt;
+             &lt;option value="AN" &gt;Netherlands Antilles (NL)&lt;/option&gt;
+             &lt;option value="NC" &gt;New Caledonia (FR)&lt;/option&gt;
+             &lt;option value="NZ" &gt;New Zealand&lt;/option&gt;
+             &lt;option value="NI" &gt;Nicaragua&lt;/option&gt;
+             &lt;option value="NE" &gt;Niger&lt;/option&gt;
+             &lt;option value="NG" &gt;Nigeria&lt;/option&gt;
+             &lt;option value="NU" &gt;Niue&lt;/option&gt;
+             &lt;option value="NF" &gt;Norfolk Island (AU)&lt;/option&gt;
+             &lt;option value="MP" &gt;Northern Mariana Islands (US)&lt;/option&gt;
+             &lt;option value="NO" &gt;Norway&lt;/option&gt;
+             &lt;option value="OM" &gt;Oman&lt;/option&gt;
+             &lt;option value="PK" &gt;Pakistan&lt;/option&gt;
+             &lt;option value="PW" &gt;Palau&lt;/option&gt;
+             &lt;option value="PA" &gt;Panama&lt;/option&gt;
+             &lt;option value="PG" &gt;Papua New Guinea&lt;/option&gt;
+             &lt;option value="PY" &gt;Paraguay&lt;/option&gt;
+             &lt;option value="PE" &gt;Peru&lt;/option&gt;
+             &lt;option value="PH" &gt;Philippines&lt;/option&gt;
+             &lt;option value="PN" &gt;Pitcairn Islands (UK)&lt;/option&gt;
+             &lt;option value="PL" &gt;Poland&lt;/option&gt;
+             &lt;option value="PT" &gt;Portugal&lt;/option&gt;
+             &lt;option value="PR" &gt;Puerto Rico (US)&lt;/option&gt;
+             &lt;option value="QA" &gt;Qatar&lt;/option&gt;
+             &lt;option value="RE" &gt;Reunion (FR)&lt;/option&gt;
+             &lt;option value="RO" &gt;Romania&lt;/option&gt;
+             &lt;option value="RU" &gt;Russia&lt;/option&gt;
+             &lt;option value="RW" &gt;Rwanda&lt;/option&gt;
+             &lt;option value="SH" &gt;Saint Helena (UK)&lt;/option&gt;
+             &lt;option value="KN" &gt;Saint Kitts and Nevis&lt;/option&gt;
+             &lt;option value="LC" &gt;Saint Lucia&lt;/option&gt;
+             &lt;option value="PM" &gt;Saint Pierre and Miquelon (FR)&lt;/option&gt;
+             &lt;option value="VC" &gt;Saint Vincent and the Grenadines&lt;/option&gt;
+             &lt;option value="WS" &gt;Samoa&lt;/option&gt;
+             &lt;option value="SM" &gt;San Marino&lt;/option&gt;
+             &lt;option value="ST" &gt;Sao Tome and Principe&lt;/option&gt;
+             &lt;option value="SA" &gt;Saudi Arabia&lt;/option&gt;
+             &lt;option value="SN" &gt;Senegal&lt;/option&gt;
+             &lt;option value="RS" &gt;Serbia&lt;/option&gt;
+             &lt;option value="CS" &gt;Serbia and Montenegro&lt;/option&gt;
+             &lt;option value="SC" &gt;Seychelles&lt;/option&gt;
+             &lt;option value="SL" &gt;Sierra Leone&lt;/option&gt;
+             &lt;option value="SG" &gt;Singapore&lt;/option&gt;
+             &lt;option value="SK" &gt;Slovakia&lt;/option&gt;
+             &lt;option value="SI" &gt;Slovenia&lt;/option&gt;
+             &lt;option value="SB" &gt;Solomon Islands&lt;/option&gt;
+             &lt;option value="SO" &gt;Somalia&lt;/option&gt;
+             &lt;option value="ZA" &gt;South Africa&lt;/option&gt;
+             &lt;option value="GS" &gt;South Georgia & South Sandwich Islands (UK)&lt;/option&gt;
+             &lt;option value="ES" &gt;Spain&lt;/option&gt;
+             &lt;option value="LK" &gt;Sri Lanka&lt;/option&gt;
+             &lt;option value="SD" &gt;Sudan&lt;/option&gt;
+             &lt;option value="SR" &gt;Suriname&lt;/option&gt;
+             &lt;option value="SZ" &gt;Swaziland&lt;/option&gt;
+             &lt;option value="SE" &gt;Sweden&lt;/option&gt;
+             &lt;option value="CH" &gt;Switzerland&lt;/option&gt;
+             &lt;option value="SY" &gt;Syria&lt;/option&gt;
+             &lt;option value="TW" &gt;Taiwan&lt;/option&gt;
+             &lt;option value="TJ" &gt;Tajikistan&lt;/option&gt;
+             &lt;option value="TZ" &gt;Tanzania&lt;/option&gt;
+             &lt;option value="TH" &gt;Thailand&lt;/option&gt;
+             &lt;option value="TL" &gt;Timor-Leste&lt;/option&gt;
+             &lt;option value="TG" &gt;Togo&lt;/option&gt;
+             &lt;option value="TK" &gt;Tokelau&lt;/option&gt;
+             &lt;option value="TO" &gt;Tonga&lt;/option&gt;
+             &lt;option value="TT" &gt;Trinidad and Tobago&lt;/option&gt;
+             &lt;option value="TN" &gt;Tunisia&lt;/option&gt;
+             &lt;option value="TR" &gt;Turkey&lt;/option&gt;
+             &lt;option value="TM" &gt;Turkmenistan&lt;/option&gt;
+             &lt;option value="TC" &gt;Turks and Caicos Islands (UK)&lt;/option&gt;
+             &lt;option value="TV" &gt;Tuvalu&lt;/option&gt;
+             &lt;option value="UG" &gt;Uganda&lt;/option&gt;
+             &lt;option value="UA" &gt;Ukraine&lt;/option&gt;
+             &lt;option value="AE" &gt;United Arab Emirates&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom&lt;/option&gt;
+             &lt;option value="UY" &gt;Uruguay&lt;/option&gt;
+             &lt;option value="UZ" &gt;Uzbekistan&lt;/option&gt;
+             &lt;option value="VU" &gt;Vanuatu&lt;/option&gt;
+             &lt;option value="VE" &gt;Venezuela&lt;/option&gt;
+             &lt;option value="VN" &gt;Vietnam&lt;/option&gt;
+             &lt;option value="VI" &gt;Virgin Islands (US)&lt;/option&gt;
+             &lt;option value="WF" &gt;Wallis and Futuna (FR)&lt;/option&gt;
+             &lt;option value="EH" &gt;Western Sahara&lt;/option&gt;
+             &lt;option value="YE" &gt;Yemen&lt;/option&gt;
+             &lt;option value="ZM" &gt;Zambia&lt;/option&gt;
+             &lt;option value="ZW" &gt;Zimbabwe&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom&lt;/option&gt;
+             &lt;option value="BH" &gt;Bahrain&lt;/option&gt;
+             &lt;option value="BZ" &gt;Belize(British Honduras)&lt;/option&gt;
+             &lt;option value="ZW" &gt;Zimbabwe(Rhodesia)&lt;/option&gt;
+             &lt;option value="TG" &gt;Togo(Togoland)&lt;/option&gt;
+             &lt;option value="BJ" &gt;Benin(Dahomey)&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom(Northern Ireland)&lt;/option&gt;
+             &lt;option value="RU" &gt;Russia(USSR)&lt;/option&gt;
+             &lt;option value="CG" &gt;Congo, Republic of the&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom(Great Britain)&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom(Scotland)&lt;/option&gt;
+             &lt;option value="TT" &gt;Trinidad and Tobago&lt;/option&gt;
+             &lt;option value="GB" &gt;United Kingdom(Wales)&lt;/option&gt;
+          &lt;/select&gt; &lt;/br&gt;
+
+
+
+          &lt;label class="form-title" for="ticketQuantity"&gt;Number of Tickets&lt;/label&gt; &lt;/br&gt;
+          &lt;input class="form-field" type="text" id="ticketQuantity" name="ticketQuantity" value="0" size="5" /&gt; &lt;/br&gt;
+
+
+          &lt;h2 class="form-title"&gt;${{formPrice}}/ticket&lt;/h2&gt; &lt;/br&gt;
+          &lt;label class="form-title" for="AMOUNT_EVT"&gt;Total Amount Paid&lt;/label&gt; &lt;/br&gt;
+
+          &lt;input class="form-field" type="text" id="AMOUNT_PAID" name="AMOUNT_PAID" value="0" readonly size="5" /&gt; &lt;/br&gt;
+          &lt;input type="hidden" id="AMOUNT_EVT" name="AMOUNT_EVT" value="0" /&gt; &lt;/br&gt;
+
+
+          &lt;!-- &lt;div class="submit-container"&gt; --&gt;
+          &lt;/br&gt;
+          &lt;input class="submit-button" type="submit" value="Submit" /&gt;
+          &lt;!-- &lt;/div&gt; --&gt;
+
+          &lt;p class="privacy_policy form-title"&gt; &lt;strong&gt;Notice:&lt;/strong&gt; New York University is committed to respecting your privacy. You can be assured that personal information will only be used by New York University to conduct official University business and personal information will never be
+            disseminated to any unaffiliated third party.&lt;br/&gt; &lt;a href="http://www.nyu.edu/about/notice.html"&gt;New York University&rsquo;s privacy policy &raquo;&lt;/a&gt; &lt;/p&gt;
+
+
+          &lt;script type="text/javascript"&gt;
+            var form = document.getElementById("cb_web_form");
+            var ticketQuantity = document.getElementById("ticketQuantity");
+            var amount = document.getElementById("AMOUNT_EVT");
+            var total = document.getElementById("AMOUNT_PAID");
+
+            function getIntValue(field) {
+              if (field == null) return 0;
+              var value = parseFloat(field.value);
+              if (isNaN(value)) return 0;
+              return value;
+            }
+
+            function calculatePaymentTotal() {
+              total.value = getIntValue(ticketQuantity);
+              total.value = total.value * {{formPrice}};
+              amount.value = total.value;
+              return true;
+            }
+            form.onsubmit = ticketQuantity.onchange = calculatePaymentTotal;
+          &lt;/script&gt;
+
+        &lt;/form&gt;
+
+
+        </p>
+      </pre>
+        <!-- </code>
+        </pre> -->
+
+
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+
+
+  </div>
+
+</div>
+
+
+
+
+</body>
+
+
+<script src="highlight\highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();
+
+</script>
+
+<script type="text/javascript">
+    console.log("HELLO WORLD");
+    var form = document.getElementById("form");
+    var formButton = document.getElementById("submitForm");
+
+    var username = document.getElementById("username");
+
+    var userValue = document.getElementById("usernameValue");
+
+
+   //
+   // function calculatePaymentTotal() {
+   //   userValue.innerHTML = username.value;
+   //   console.log("ITS LIVE");
+   //   return true;
+   // }
+
+   // form.onsubmit = calculatePaymentTotal;
+
+   formButton.onclick = function(){
+     console.log("ITS LIVE");
+     userValue.innerText = username.value;
+
+
+   };
+ </script>
+
+
+<script src="https://unpkg.com/vue"></script>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!',
+    usernameVal: 'NOT WORKING',
+    formID: '0000',
+    formFlag: 'Y',
+    formPrice: ''
+  },
+  methods: {
+    updateForm: function() {
+      console.log("hello");
+      usernameVal = message;
+    }
+  }
+})
+
+</script>
+
+<html>
